@@ -16,11 +16,11 @@ export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
 4. Activate the new environment to install the following
 5. Installed pyspark 
 
-```conda 
+```ksh 
 conda install -c conda-forge pyspark
 ```
 6. Installed  spark-nlp 
-```conda 
+```ksh 
 conda install -c johnsnowlabs spark-nlp
 ```
 7. type pyspark in the terminal with env activated (it should open with Jupyter)
