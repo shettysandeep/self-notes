@@ -1,0 +1,8 @@
+#+title: On Emacs
+
+* Fixed Emacs 29.1 (Dec 8, 2023)
+1) After upgrading to 29.1 had some issues with Marginalia, which caused vertico to not function properly. Reinstalling Marginalia sorted the issue.
+2) Next, I had issues with the major mode not being interpreted at all. Everything was being read as Fundamental. I realized I had to edit `auto-add-alist`.
+   - I found this link with file extensions and the associated modes. Added the value to my init file.
+   - While wrangling with the above, I also discovered the discussion around tree-sitter so installed that as well.
+3) Then I was hitting `Symbol's value as void...` triggered by Magit. So, I reinstalled Magit, restarted EMACS and then happy.
