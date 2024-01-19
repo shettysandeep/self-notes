@@ -11,8 +11,11 @@
 1) Importing pytensor in a python script inside EMACS was giving warning ~Using NumPy C-API based implementation for BLAS functions.~
 2) Interestingly, this was not showing up when I was firing python on the ~terminal~ and importing pytensor.
 3) The fix was simple and as below:
-   a) started python in the terminal, then ~import pytensor as pt~ and then ~pt.config.blas__ldflags~. Since pytensor was working in the terminal fired python, the code above produced a string ~-L/Users/uname/opt/miniconda3/envs/pymc_env/lib -lmkl_core -lmkl_rt -lmkl_intel_thread -liomp5 -lpthread -Wl,-rpath,/Users/uname/opt/miniconda3/envs/pymc_env/lib~
-   b) created ~.pytensorrc~ file in $HOME and inserted the string above 
+   - started python in the terminal, then ~import pytensor as pt~ and then ~pt.config.blas__ldflags~. Since pytensor was working in the terminal fired python, the code above produced a string 
+~-L/Users/uname/opt/miniconda3/envs/pymc_env/lib -lmkl_core -lmkl_rt -lmkl_intel_thread -liomp5 -lpthread -Wl,-rpath,/Users/uname/opt/miniconda3/envs/pymc_env/lib~
+
+   - created ~.pytensorrc~ file in $HOME and inserted the string above 
+#+begin_src
       ~[blas]~  
       ~ldflags=-L/Users/uname/opt/miniconda3/envs/pymc_env/lib -lmkl_core -lmkl_rt -lmkl_intel_thread -liomp5 -lpthread -Wl,-      rpath,/Users/uname/opt/miniconda3/envs/pymc_env/lib~
-This stopped the warning.
+#+end_src
