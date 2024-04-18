@@ -4,6 +4,11 @@ Basically, notebook was using a different Python kernel than the environment und
 
 `pip install ipykernel` then `python -m ipykernel install --user --name=myenv`
 
+source: 
+https://saturncloud.io/blog/running-jupyter-notebook-in-a-virtual-environment-installed-scikitlearn-module-not-available/#:~:text=If%20you%20encounter%20the%20error,and%20enable%20the%20ipykernel%20package.&text=pip%20install%20ipykernel-,Next%2C%20you'll%20need%20to%20install%20the,kernel%20for%20your%20virtual%20environment.
+
+http://takluyver.github.io/posts/i-cant-import-it.html
+
 ### Removed Miniconda to install Python directly. 
 Required the following:
 1. Installed Python directly
